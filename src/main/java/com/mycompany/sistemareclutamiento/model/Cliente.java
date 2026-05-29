@@ -24,8 +24,25 @@ public class Cliente {
         this.ofertas = new ArrayList<>();
     }
 
-    public boolean agregarOferta(Oferta oferta) { return false; }
-    public boolean eliminarOferta(Oferta oferta) { return false; }
-    public Oferta[] getOfertas() { return null; }
+    public String getRuc() { return ruc; }
+    public String getRazonSocial() { return razonSocial; }
+    public String getEmail() { return email; }
+    public String getContacto() { return contacto; }
+    public String getTelefono() { return telefono; }
+    public void setClave(String clave) { this.clave = clave; }
+    public Rubro getRubro() { return rubro; }
+
+    public boolean agregarOferta(Oferta oferta) {
+        ofertas.add(oferta);
+        return true;
+    }
+
+    public boolean eliminarOferta(Oferta oferta) {
+        return ofertas.remove(oferta);
+    }
+
+    public Oferta[] getOfertas() {
+        return ofertas.toArray(new Oferta[0]);
+    }
 
 }

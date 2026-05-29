@@ -17,4 +17,12 @@ public class Postulacion {
         this.anulado = false;
     }
 
+    public Date getFecha() { return fecha; }
+    public boolean isAnulado() { return anulado; }
+    public Date getFechaAnulacion() { return fechaAnulacion; }
+    public Oferta getOferta() { return oferta; }
+
+    public void setAnulado(boolean anulado) { this.anulado = anulado; }
+    public void setFechaAnulacion(Date fechaAnulacion) { this.fechaAnulacion = fechaAnulacion; }
+
 }

@@ -10,7 +10,17 @@ public class Rubro {
         this.estado = true;
     }
 
-    public boolean habilitar() { return false; }
-    public boolean deshabilitar() { return false; }
+    public String getNombre() { return nombre; }
+    public boolean isEstado() { return estado; }
+
+    public boolean habilitar() {
+        estado = true;
+        return true;
+    }
+
+    public boolean deshabilitar() {
+        estado = false;
+        return true;
+    }
 
 }

@@ -22,8 +22,29 @@ public class Oferta {
         this.requisitos = new ArrayList<>();
     }
 
-    public boolean agregarRequisito(int orden, String descripcion) { return false; }
-    public Requisito[] getRequisitos() { return null; }
-    public boolean eliminarRequisito(int orden) { return false; }
+    public String getPuesto() { return puesto; }
+    public String getDescripcion() { return descripcion; }
+    public String getArea() { return area; }
+    public Date getFechaInicio() { return fechaInicio; }
+    public Date getFechaTermino() { return fechaTermino; }
+
+    public boolean agregarRequisito(int orden, String descripcion) {
+        requisitos.add(new Requisito(orden, descripcion));
+        return true;
+    }
+
+    public Requisito[] getRequisitos() {
+        return requisitos.toArray(new Requisito[0]);
+    }
+
+    public boolean eliminarRequisito(int orden) {
+        for (int i = 0; i < requisitos.size(); i++) {
+            if (requisitos.get(i).getOrden() == orden) {
+                requisitos.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
