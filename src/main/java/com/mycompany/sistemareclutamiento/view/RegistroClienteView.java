@@ -6,7 +6,7 @@ public class RegistroClienteView extends JFrame {
 
     private JLabel lblRuc, lblRazonSocial, lblEmail, lblContacto, lblTelefono, lblRubro;
     private JTextField txtRuc, txtRazonSocial, txtEmail, txtContacto, txtTelefono;
-    private JComboBox<String> cmbRubro;
+    private JTextField txtRubro;
     private JButton btnRegistrar;
     private JTextArea txtResultado;
 
@@ -59,9 +59,9 @@ public class RegistroClienteView extends JFrame {
         lblRubro = new JLabel("Rubro:");
         lblRubro.setBounds(14, 227, 37, 14);
         add(lblRubro);
-        cmbRubro = new JComboBox<>(new String[]{"Tecnología", "Finanzas", "Salud", "Educación", "Retail"});
-        cmbRubro.setBounds(143, 224, 267, 20);
-        add(cmbRubro);
+        txtRubro = new JTextField();
+        txtRubro.setBounds(143, 224, 267, 20);
+        add(txtRubro);
 
         btnRegistrar = new JButton("REGISTRAR");
         btnRegistrar.setBounds(157, 261, 89, 23);
@@ -79,7 +79,7 @@ public class RegistroClienteView extends JFrame {
     public String getTxtEmail() { return txtEmail.getText(); }
     public String getTxtContacto() { return txtContacto.getText(); }
     public String getTxtTelefono() { return txtTelefono.getText(); }
-    public String getRubroSeleccionado() { return (String) cmbRubro.getSelectedItem(); }
+    public String getTxtRubro() { return txtRubro.getText(); }
     public JButton getBtnRegistrar() { return btnRegistrar; }
     public void mostrarResultado(String texto) { txtResultado.setText(texto); }
 
